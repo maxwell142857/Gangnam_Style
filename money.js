@@ -6,7 +6,7 @@ var x_ratio = your_x / 2312;
 var y_ratio = your_y / 1080;
 var REBACK = [2000*x_ratio, 700*y_ratio]; // 无效点，地图上一个没有建筑的点，用于返回操作
 var SLEEP = 500; // 休眠（ms），一般不用动
-var MINS = 3; // 循环用时（min）
+var MINS = 5; // 循环用时（min）
 var WARN = 3; // 提醒时间（s）
 var TASKS = [
     [1080*x_ratio, 100*y_ratio],
