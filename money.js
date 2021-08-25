@@ -6,7 +6,7 @@ var x_ratio = your_x / 2312;
 var y_ratio = your_y / 1080;
 var REBACK = [2000*x_ratio, 700*y_ratio]; // 无效点，地图上一个没有建筑的点，用于返回操作
 var SLEEP = 500; // 休眠（ms），一般不用动
-var MINS = 5; // 循环用时（min）
+var MINS = 2; // 循环用时（min）
 var WARN = 3; // 提醒时间（s）
 var TASKS = [
     [1080*x_ratio, 100*y_ratio],
@@ -67,7 +67,7 @@ function check_well() {
 function check_jigsaw() {
     var stage = images.captureScreen();
     var pp = findImage(stage, myjigsaw, {
-        threshold: 0.7,
+        threshold: 0.6,
     });
     if (pp) {
         //发现解拼图页面，需要解拼图
@@ -88,7 +88,7 @@ function jigsaw(x, y) {
             sleep(SLEEP * 2);
             var ok_picture = images.captureScreen();
             var p = findImage(ok_picture, myjigsaw, {
-                threshold: 0.7,
+                threshold: 0.6,
             });
             if (!p) {
                 log("拼图已完成");
@@ -135,4 +135,4 @@ main(TASKS);
 //循环运行
 setInterval(function () {
     main(TASKS);
-}, MINS)
+}, MINS*60*1000)
