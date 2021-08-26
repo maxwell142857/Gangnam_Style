@@ -25,7 +25,7 @@
 
 + 在代码开头，修改自身参数，如下图
 
-![image-20210826112126156](C:\Users\ywhf\AppData\Roaming\Typora\typora-user-images\image-20210826112126156.png)
+![代码](https://github.com/maxwell142857/Gangnam_Style/blob/main/picture/code.png)
 
 + 打开江南百景图，按照下图位置在**应天府**中**灶神雕像**附近布置水井
 
