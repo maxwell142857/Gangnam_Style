@@ -29,7 +29,7 @@
 
 + 打开江南百景图，按照下图位置在**应天府**中**灶神雕像**附近布置水井
 
-![水井位置](https://github.com/maxwell142857/Gangnam_Style/blob/main/picture/code.png)
+![水井位置](https://github.com/maxwell142857/Gangnam_Style/blob/main/picture/well_location.jpg)
 
 ## 使用脚本
 
