@@ -7,13 +7,13 @@
 var your_x = 2312;//填写手机像素比较大的那个值
 var your_y = 1080;//填写手机像素比较小的那个值
 var well_cnt = 20;//填写在样图的布置下，使用的水井数（因为有时手上工人不到30个），上限为20
-
+var MINS = 1.5; // 循环用时（min），如果是满级水井，请填写1.5，否则填写3
 //除非充分理解程序，否则不要修改以下信息
 var x_ratio = your_x / 2312;
 var y_ratio = your_y / 1080;
 var REBACK = [2000*x_ratio, 700*y_ratio]; // 无效点，地图上一个没有建筑的点，用于返回操作
 var SLEEP = 500; // 休眠（ms）
-var MINS = 2; // 循环用时（min）
+
 var WARN = 3; // 提醒时间（s）
 var TASKS = [
     [1080*x_ratio, 100*y_ratio],
@@ -70,7 +70,7 @@ function jigsaw(x, y) {
     //枚举所有拖动情况，每拖动一次，判断拼图是否已经完成
     for (var i = 0; i < 12; i++) {
         for (var j = i + 1; j < 12; j++) {
-            swipe(jigsaw_x[i%6]*x_ratio,jigsaw_y[i>5?1:0]*y_ratio , jigsaw_x[j%6]*x_ratio,jigsaw_y[j>5?1:0]*y_ratio , SLEEP*2);
+            swipe(jigsaw_x[i%6]*x_ratio,jigsaw_y[i>5?1:0]*y_ratio , jigsaw_x[j%6]*x_ratio,jigsaw_y[j>5?1:0]*y_ratio , SLEEP);
             log("%d %d => %d %d",jigsaw_x[i%6]*x_ratio,jigsaw_y[i>5?1:0]*y_ratio , jigsaw_x[j%6]*x_ratio,jigsaw_y[j>5?1:0]*y_ratio );
             sleep(SLEEP * 2);
             var ok_picture = images.captureScreen();
